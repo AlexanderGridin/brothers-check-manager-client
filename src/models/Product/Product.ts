@@ -1,10 +1,18 @@
-export type QuantityUnit = "kg" | "pcs" | "liters";
+import { QuantityUnit } from "../../types";
+import { ProductFormValue } from "./ProductFormValue";
 
 export class Product {
   public id = "";
   public name = "";
   public quantityUnit!: QuantityUnit;
   public created = "";
+
+  public static toFormValue(product: Product): ProductFormValue {
+    return {
+      name: product.name,
+      quantityUnit: product.quantityUnit,
+    };
+  }
 }
 
 export interface ProductCreateDto {
