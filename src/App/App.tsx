@@ -1,35 +1,15 @@
-import { Product, ProductFormValue } from "../models/Product";
+import { AppLayout } from "./components/AppLayout";
+
 import "./App.css";
-import { Card } from "./components/Card";
-import { ProductForm } from "./components/ProductForm";
 
 export const App = () => {
-  const testProduct: Product = {
-    id: "1",
-    name: "Snikers",
-    quantityUnit: "pcs",
-    created: "11/07/2023",
-  };
-
   return (
-    <div>
-      <Card maxWidth={850} title="Add product">
-        <ProductForm
-          resetAfterSubmit
-          onSubmit={(formValue: ProductFormValue) => {
-            console.log("create form", formValue);
-          }}
-        />
-      </Card>
-
-      <Card maxWidth={850} title="Update product">
-        <ProductForm
-          entity={testProduct}
-          onSubmit={(formValue: ProductFormValue) => {
-            console.log("edit form", formValue);
-          }}
-        />
-      </Card>
-    </div>
+    <AppLayout
+      header={<div>header</div>}
+      footer={<div>footer</div>}
+      sidebar={<div style={{ color: "#FFF" }}>sidebar</div>}
+    >
+      <div style={{ color: "#FFF" }}>Main content</div>
+    </AppLayout>
   );
 };
