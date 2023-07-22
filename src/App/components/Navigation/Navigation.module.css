@@ -1,0 +1,15 @@
+.link {
+  color: #fff;
+  font-size: 18px;
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  background-color: #2e3440;
+  width: 100%;
+  transition: background-color 0.4s;
+}
+
+.active,
+.link:hover {
+  background-color: #5e81ac;
+}
