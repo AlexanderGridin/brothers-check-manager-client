@@ -1,0 +1,7 @@
+.formRow:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.formControl {
+  width: 100%;
+}
