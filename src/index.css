@@ -23,3 +23,9 @@ h2 {
   padding: 0;
   line-height: 1.2;
 }
+
+.plain-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

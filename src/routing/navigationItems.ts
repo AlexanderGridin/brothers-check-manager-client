@@ -1,0 +1,12 @@
+import { NavigationItem } from "../models";
+
+export const navigationItems: NavigationItem[] = [
+  {
+    path: "/",
+    text: "Home",
+  },
+  {
+    path: "about",
+    text: "About",
+  },
+];
