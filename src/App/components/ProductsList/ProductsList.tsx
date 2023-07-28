@@ -1,11 +1,13 @@
 import { useDispatch } from "react-redux";
 import { Product } from "../../../models/Product";
-import { deleteProduct } from "../../../store/slices/productsSlice";
+import { deleteProduct, setProducts } from "../../../store/slices/productsSlice";
 import { useProductsSelector } from "../../../store/slices/useProductsSelector";
 import { EditButton } from "../buttons";
 import { DeleteButton } from "../buttons/DeleteButton";
 import { Card } from "../Card";
 import styles from "./ProductsList.module.css";
+import { useEffect } from "react";
+import { fetchProducts } from "../../../api/products.api";
 
 const quantityUnitsMap: Record<string, string> = {
   liter: "Л",
@@ -28,6 +30,15 @@ export const ProductsList = ({ onEdit }: ProductListProps) => {
   const handleDeleteClick = (product: Product) => () => {
     dispatch(deleteProduct(product));
   };
+
+  const loadProducts = async () => {
+    const products = await fetchProducts();
+    dispatch(setProducts(products))
+  }
+
+  useEffect(() => {
+    loadProducts()
+  }, [])
 
   if (!products.length) {
     return <p>No product to display....</p>;

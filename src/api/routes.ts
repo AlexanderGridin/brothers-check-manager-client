@@ -5,4 +5,7 @@ export const routes = {
     update: "/checks",
     delete: "/checks",
   },
+  products: {
+    getAll: '/products'
+  }
 };

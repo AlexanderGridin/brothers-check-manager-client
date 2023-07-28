@@ -28,8 +28,11 @@ export const productsSlice = createSlice({
       const productToDelete = action.payload;
       state.products = state.products.filter((product) => product.id !== productToDelete.id);
     },
+    setProducts: (state: ProductsState, action: PayloadAction<Product[]>) => {
+      state.products = action.payload
+    }
   },
 });
 
-export const { addProduct, updateProduct, deleteProduct } = productsSlice.actions;
+export const { addProduct, updateProduct, deleteProduct, setProducts } = productsSlice.actions;
 export const productsReucer = productsSlice.reducer;
