@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { App } from "../App";
+import { ProductsPage } from "../App/pages/ProductsPage";
 
 const About = () => {
   return <h1>About page</h1>;
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
       {
         path: "about",
         element: <About />,
+      },
+      {
+        path: "products",
+        element: <ProductsPage />,
       },
     ],
   },
