@@ -9,4 +9,8 @@ export const navigationItems: NavigationItem[] = [
     path: "about",
     text: "About",
   },
+  {
+    path: "products",
+    text: "Products",
+  },
 ];

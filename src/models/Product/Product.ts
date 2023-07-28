@@ -4,7 +4,7 @@ import { ProductFormValue } from "./ProductFormValue";
 export class Product {
   public id = "";
   public name = "";
-  public quantityUnit!: QuantityUnit;
+  public quantityUnit: QuantityUnit | "" = "";
   public created = "";
 
   public static toFormValue(product: Product): ProductFormValue {

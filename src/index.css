@@ -5,6 +5,8 @@ body {
   box-sizing: border-box;
   height: 100%;
   background-color: #2e3440;
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: 18px;
 }
 
 *,

@@ -7,8 +7,8 @@ export const Navigation = () => {
   return (
     <nav>
       <ul className="plain-list">
-        {navigationItems.map((item: NavigationItem) => (
-          <li>
+        {navigationItems.map((item: NavigationItem, index: number) => (
+          <li key={index}>
             <NavLink
               className={({ isActive }) => {
                 return isActive ? `${styles.link} ${styles.active}` : styles.link;
