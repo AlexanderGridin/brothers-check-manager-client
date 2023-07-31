@@ -6,6 +6,9 @@ export const routes = {
     delete: "/checks",
   },
   products: {
-    getAll: '/products'
-  }
+    getAll: "/products",
+    delete: "/products?id={productId}",
+    update: "/products",
+    create: "/products",
+  },
 };
