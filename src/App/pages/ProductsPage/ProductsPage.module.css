@@ -1,3 +1,14 @@
 .wrapper {
   max-width: 850px;
 }
+
+.disabledPointer {
+  pointer-events: none;
+}
+
+.productsListContainer {
+  min-height: 350px;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
