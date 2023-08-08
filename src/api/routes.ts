@@ -5,10 +5,18 @@ export const routes = {
     update: "/checks",
     delete: "/checks",
   },
+
   products: {
     getAll: "/products",
-    delete: "/products?id={productId}",
+    delete: "/products/{productId}",
     update: "/products",
     create: "/products",
+  },
+
+  stores: {
+    getAll: "/stores",
+    create: "/stores",
+    delete: "/stores/{storeId}",
+    update: "/stores",
   },
 };

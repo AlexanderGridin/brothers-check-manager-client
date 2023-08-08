@@ -15,7 +15,7 @@ export class Product {
     };
   }
 
-  public static toCreateDto(product: Product): Omit<Product, "id" | "isLoading"> {
+  public static toCreateDto(product: Product): ProductCreateDto {
     return {
       name: product.name,
       quantityUnit: product.quantityUnit,
@@ -26,7 +26,6 @@ export class Product {
 
 export interface ProductCreateDto {
   name: string;
-  quantityUnit: QuantityUnit;
+  quantityUnit: QuantityUnit | "";
+  created: string;
 }
-
-export interface ProductDto extends Product {}

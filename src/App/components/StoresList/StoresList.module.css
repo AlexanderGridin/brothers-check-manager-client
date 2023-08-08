@@ -1,0 +1,9 @@
+.listItem:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.cardContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
