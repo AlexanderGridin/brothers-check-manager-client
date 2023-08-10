@@ -1,4 +1,4 @@
-import { Product } from "../models/Product";
+import { Product, ProductCreateDto } from "../models/Product";
 import { http } from "./http";
 import { routes } from "./routes";
 
@@ -13,7 +13,7 @@ export const fetchProducts = async (): Promise<Product[]> => {
   }
 };
 
-export const createProductAsync = async (body: Omit<Product, "id" | "isLoading">): Promise<Product | null> => {
+export const createProductAsync = async (body: ProductCreateDto): Promise<Product | null> => {
   const route = routes.products.create;
 
   try {

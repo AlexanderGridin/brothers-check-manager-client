@@ -13,4 +13,8 @@ export const navigationItems: NavigationItem[] = [
     path: "products",
     text: "Products",
   },
+  {
+    path: "stores",
+    text: "Stores",
+  },
 ];
